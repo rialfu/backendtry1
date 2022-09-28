@@ -29,7 +29,7 @@ export default function Home() {
             {data?.data ? data.data.map((item, index) => (
         <p key={index}>{item}</p>
       )) :
-        <p>data kosong</p>
+        <></>
       }
     
         </div>
