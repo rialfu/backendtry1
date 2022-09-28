@@ -25,10 +25,15 @@ export default function Home() {
     if (!data) {
         return <div>Loading...</div>
     }
-    
+    if (!data.data){
+        return <div>Data kosong</div>
+    }
     return (
         <div>
-            <p>data: {data.data}</p>
+            {data.data.map((item, index) => (
+                <p key={index}>{item}</p>
+            ))}
+            {/* <p>data: {data.data}</p> */}
         </div>
     )
 }

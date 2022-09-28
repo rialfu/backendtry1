@@ -27,7 +27,7 @@ func postHandler(c *gin.Context) {
 }
 func handler(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
-		"data": "da",
+		"data": db,
 	})
 }
 func main() {
