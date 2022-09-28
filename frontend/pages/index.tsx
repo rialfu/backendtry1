@@ -41,23 +41,6 @@ export default function Home() {
                     )
             }
             </div>
-            
-            
-
-            {/* {error && <div>Failed to load {error.toString()}</div>}
-            {!data ? 
-                <div>Loading...</div> : 
-                ((data?.data ?? []).length === 0 && <p>data kosong</p>)
-            }
-            {data?.data ? data.data.map((item, index) => (
-                <p key={index}>{item}</p>
-            )) :
-                <></>
-            }
-
-            <h1 className="text-3xl font-bold underline">
-                Hello world!
-            </h1> */}
 
 
         </div>
