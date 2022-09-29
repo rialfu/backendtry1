@@ -6,12 +6,20 @@ on:
       - master
 
 jobs:
+  runtesting:
+    runs-on: ubuntu-lastest
+    steps:
+      - uses: actions/checkout@v3
+      - name: test
+        run : go test -cover -v ./todos
+        working-directory: backend
+
   heroku:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-
+      
       - name: Add api remote origin
         run: git remote add heroku https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git
       - name: Deploy api to Heroku
